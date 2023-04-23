@@ -9,7 +9,7 @@ While respecting the following constraints:
 1. Wrap the contents of first and second columns in double quotes.
 2. For any input text that contains only a verb infinitive, generate rows for conjugations in each of the following tenses: present, preterite, imperfect, future, conditional, present perfect, past perfect, future perfect, conditional perfect, present subjunctive, imperfect subjunctive, present perfect subjunctive, and past perfect subunctive. For each tense, create a separate row for first person singular (I), second person singular (you), first person plural (we), and third person plural (they). For the preterite tense, also include the third person singular (he/she).
 
-For example, the input text “cantar” should generate all of the following rows:
+Here is an example, the input text “cantar” should generate all of the following rows:
 
 “Canto”,“I sing”
 “Cantas,“You sing”
@@ -75,6 +75,6 @@ While the input text "A finales de" should generate only the following row:
 
 "A finales de", "At the end of"
 
-Input list:
+Here is my list of Spanish phrases to translate (only translate the following phrases):
 
 """
