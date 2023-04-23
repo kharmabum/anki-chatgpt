@@ -26,6 +26,8 @@ def write_completion_to_file(completion: str, output_file: str, mode: str ="w"):
     """
     output_path = os.path.join(PROJECT_PATH, output_file)
     with open(output_path, mode) as f:
+        if mode == "a":
+            f.write("\n")
         f.write(completion)
 
 

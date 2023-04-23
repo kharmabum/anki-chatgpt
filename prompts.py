@@ -75,6 +75,6 @@ While the input text "A finales de" should generate only the following row:
 
 "A finales de","At the end of"
 
-Here is my list of Spanish phrases to translate (only translate the following phrases):
+List of Spanish phrases to translate (ONLY TRANSLATE THE FOLLOWING LIST, DO NOT RETURN TRANSLATIONS FOR ANY OTHER TEXT):
 
 """
