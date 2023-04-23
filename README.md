@@ -2,6 +2,8 @@
 
 Generate a csv file that you can use to import into Anki to create flashcards for learning Spanish.
 
+This script uses OpenAI to generate translations. When it encounters a verb infinitive it will automatically translate it into roughly 53 conjugations corresponding to all of the following tenses (see `prompts.py`): `present, preterite, imperfect, future, conditional, present perfect, past perfect, future perfect, conditional perfect, present subjunctive, imperfect subjunctive, present perfect subjunctive, and past perfect subunctive. For each tense, create a separate row for first person singular (I), second person singular (you), first person plural (we), and third person plural (they). For the preterite tense, also include the third person singular (he/she).`
+
 ## Usage
 
 First clone the project
