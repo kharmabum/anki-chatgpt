@@ -61,19 +61,19 @@ Here is an example, the input text “cantar” should generate all of the follo
 “Cantaras”,”You used to sing (subjunctive)”
 “Cantaramos”,”We used to sing (subjunctive)”
 “Cantaran”, “They used to sing (subjunctive)”
-“Haya cantado”, “I have sung (subjunctive)”
-“Hayas cantado”, “You have sung (subjunctive)”
-“Hayamos cantado”, “We have sung (subjunctive)”
-“Hayan cantado”, “They have sung (subjunctive)”
-“Huberia cantado”, “I had sung (subjunctive)”
-“Huberias cantado”, “You had sung (subjunctive)”
-“Huberias cantado”, “You had sung (subjunctive)”
-“Huberiamos cantado”, “We had sung (subjunctive)”
-“Huberian cantado”, “They had sung (subjunctive)”
+“Haya cantado”,“I have sung (subjunctive)”
+“Hayas cantado”,“You have sung (subjunctive)”
+“Hayamos cantado”,“We have sung (subjunctive)”
+“Hayan cantado”,“They have sung (subjunctive)”
+“Huberia cantado”,“I had sung (subjunctive)”
+“Huberias cantado”,“You had sung (subjunctive)”
+“Huberias cantado”,“You had sung (subjunctive)”
+“Huberiamos cantado”,“We had sung (subjunctive)”
+“Huberian cantado”,“They had sung (subjunctive)”
 
 While the input text "A finales de" should generate only the following row:
 
-"A finales de", "At the end of"
+"A finales de","At the end of"
 
 Here is my list of Spanish phrases to translate (only translate the following phrases):
 

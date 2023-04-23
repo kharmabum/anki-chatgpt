@@ -87,7 +87,7 @@ def sanitize_completion(completion: str):
     lines = completion.split('\n')
     valid_lines = []
     for line in lines:
-        if len(line.split('","')) == 2:
+        if len(line.split('","')) == 2 or len(line.split('", "')) == 2:
             valid_lines.append(line)
 
     return '\n'.join(valid_lines)
@@ -117,13 +117,17 @@ def main():
     temperature = 0
 
     openai.api_key = os.getenv("OPENAI_API_KEY")
-    is_test = os.getenv("OPENAI_TEST_RUN", False)
+    is_test = os.getenv("OPENAI_TEST_RUN", True)
 
     input_file = get_input_file(is_test=is_test)
     output_file = f'output-{int(time.time())}.txt'
+    print("Input file:", input_file)
+    print("Output file:", output_file)
+
     full_input = get_input(input_file)
     input_length = len(full_input)
-    # Process 10 lines of input at a time
+
+    # Process 2 lines of input at a time
     for i in range(0, input_length, 2):
         slice_index = min(i+2, input_length)
         input = full_input[i:slice_index]
