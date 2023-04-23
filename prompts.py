@@ -1,14 +1,13 @@
 
 PROMPT = """
-For the following list of words or idiomatic phrases, perform the following actions:
+For the following list of Spanish phrases, perform the following actions:
 
 1. Generate a CSV with the input text in column 1 and an English translation in column 2
 
-While respecting the provided constraints:
+While respecting the following constraints:
 
-1. Wrap the contents of output’s first and second columns in double quotes.
-2. For any input text that contains only an unconjugated verb, generate rows for conjugations in each of the following tenses: present, preterite, imperfect, future, conditional, present perfect, past perfect, future perfect, conditional perfect, present subjunctive, imperfect subjunctive, present perfect subjunctive, and past perfect subunctive. For each tense, create a separate row for first person singular (I), second person singular (you), first person plural (we), and third person plural (they). For the preterite tense, also include the third person singular (he/she).
-3. Add accents when appropriate and missing
+1. Wrap the contents of first and second columns in double quotes.
+2. For any input text that contains only a verb infinitive, generate rows for conjugations in each of the following tenses: present, preterite, imperfect, future, conditional, present perfect, past perfect, future perfect, conditional perfect, present subjunctive, imperfect subjunctive, present perfect subjunctive, and past perfect subunctive. For each tense, create a separate row for first person singular (I), second person singular (you), first person plural (we), and third person plural (they). For the preterite tense, also include the third person singular (he/she).
 
 For example, the input text “cantar” should generate all of the following rows:
 
@@ -71,6 +70,10 @@ For example, the input text “cantar” should generate all of the following ro
 “Huberias cantado”, “You had sung (subjunctive)”
 “Huberiamos cantado”, “We had sung (subjunctive)”
 “Huberian cantado”, “They had sung (subjunctive)”
+
+While the input text "A finales de" should generate only the following row:
+
+"A finales de", "At the end of"
 
 Input list:
 

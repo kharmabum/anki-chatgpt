@@ -1,7 +1,11 @@
 import os
 import time
+
 import openai
+from retry import retry
+
 from prompts import PROMPT
+
 
 TEST_INPUT_FILE = "test_input.txt"
 INPUT_FILE = "input.txt"
@@ -52,6 +56,7 @@ def get_input(input_file: str) -> list:
     return inputs
 
 
+@retry(delay=10, backoff=2)
 def get_completion(prompt: str, model: str, temperature: int):
     """
     Get completion from OpenAI
@@ -121,8 +126,9 @@ def main():
     # Process 10 lines of input at a time
     for i in range(0, input_length, 2):
         slice_index = min(i+2, input_length)
-        input = full_input[i:min(i+2, input_length)]
+        input = full_input[i:slice_index]
         prompt = root_prompt + "".join(input)
+        prompt = prompt + "\n(END OF INPUT LIST)"
         completion = get_completion(prompt, model, temperature)
         completion = sanitize_completion(completion)
         write_completion_to_file(completion, output_file, mode="a")
