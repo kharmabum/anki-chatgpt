@@ -119,10 +119,10 @@ def main():
     temperature = 0
 
     openai.api_key = os.getenv("OPENAI_API_KEY")
-    is_test = os.getenv("OPENAI_TEST_RUN", True)
+    is_test = os.getenv("OPENAI_TEST_RUN", False)
 
     input_file = get_input_file(is_test=is_test)
-    output_file = f'output-{int(time.time())}.txt'
+    output_file = f'output-{int(time.time())}.csv'
     print("Input file:", input_file)
     print("Output file:", output_file)
 
